@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.root{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    &>*{
+        font-family: 'Poppins', sans-serif;
+    }
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        min-height: 100px;
+        .navLeft,
+        .navRight{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100px;
+        }
+        .navLeft{
+            width: 30%;
+            padding-left: 4rem;
+            h1{
+                color: white;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 60px;
+                margin-right: 2rem;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    margin: 0 15px;
+                    .link{
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 500;
+                        transition: .3s;
+                        &:hover{
+                            color: rgba(236, 28, 36, 1) !important;
+                        }
+                    }
+                }
+                .servicesLink{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    .servicesBtn{
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        font-size: 15px;
+                        font-weight: 500;
+                        border: none;
+                        outline: none;
+                        background: none;
+                        font-family: 'Poppins', sans-serif;
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover{
+                            color: rgba(236, 28, 36, 1) !important;
+                        }
+                    }
+                    ol{
+                        flex-direction: column;
+                        position: absolute;
+                        top: 2rem;
+                        li{
+                            margin: 5px 0;
+                            .link{
+                                transition: .3s;
+                                &:hover{
+                                    color: rgba(236, 28, 36, 1) !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navRight{
+            width: 38%;
+            padding-right: 10rem;
+            .lang{
+                display: flex;
+                align-items: center;
+                position: relative;
+                .langTop{
+                    display: flex;
+                    align-items: center;
+                    button{
+                        border: none;
+                        outline: none;
+                        background: none;
+                        cursor: pointer;
+                        img{
+                            width: 20px;
+                            margin-right: 5px;
+                            position: relative;
+                            z-index: 5;
+                        }
+                    }
+                    .lang_en,
+                    .lang_ru,
+                    .lang_stick{
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 15px;
+                        margin: 0 4px;
+                        transform: translateY(-10%);
+                    }
+                    .lang_en{
+                        color: white;
+                    }
+                    .lang_stick,
+                    .lang_ru{
+                        color: rgba(196, 196, 196, 0.6);
+                    }
+                }
+                .langBottom{
+                    position: absolute;
+                    top: 120%;
+                    flex-direction: column;
+                    align-items: center;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    li{
+                        margin: 5px 0;
+                        a{
+                            position: relative;
+                            color: white;
+                            font-size: 14px;
+                            cursor: pointer;
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                width: 120%;
+                                height: 1px;
+                                left: -10%;
+                                bottom: 0;
+                                background-color: white;
+                                opacity: 0;
+                                transition: 0.3s;
+                            }
+                            &:hover::before{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            #langOpen{
+                position: relative;
+                &::before{
+                    content: '';
+                    background-color: rgba(15, 15, 15, 0.7);
+                    position: absolute;
+                    top: -100%;
+                    left: -25%;
+                    width: 150%;
+                    height: 210px;
+                    filter: blur(4px);
+                }
+            }
+            .number{
+                color: white;
+                font-weight: 500;
+                font-size: 15px;
+            }
+            .btnDiv{
+                .contactBtn{
+                    border: 1px solid rgba(236, 28, 36, 1);
+                    outline: none;
+                    color: rgba(236, 28, 36, 1);
+                    transition: .3s;
+                    font-family: 'Poppins', sans-serif;
+                    padding: 10px 32px;
+                    background: none;
+                    cursor: pointer;
+                    margin-left: 2rem;
+                    &:hover{
+                        background: rgba(236, 28, 36, 1);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    #navBig{
+        height: 250px;
+        background: rgba(15, 15, 15, 0.7);
+        backdrop-filter: blur(10px);
+        align-items: flex-start;
+    }
+}
