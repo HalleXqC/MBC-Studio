@@ -48,6 +48,30 @@
             text-align: center;
             width: 75%;
             margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+        .weDo{
+            background-color: white;
+            width: 75%;
+            margin: 0 auto;
+            padding: 3rem 0;
+            .weDoBlock{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+                padding-top: 2rem;
+                div{
+                    margin: 10px 0;
+                    p{
+                        color: black;
+                        font-size: 25px;
+                        text-align: center;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }
