@@ -1,0 +1,17 @@
+.root{
+    background-color: white;
+    padding: 8vh 0;
+    position: relative;
+    .title{
+        width: 30%;
+        position: relative;
+        display: block;
+    }
+    .benefits{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,139 @@
+.tech{
+    background-color: black;
+    padding-top: 15vh;
+    width: 100%;
+    position: relative;
+    padding-bottom: 20vh;
+    ul{
+        width: 60%;
+        position: relative;
+        padding-top: 5vh;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li{
+            display: flex;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 15px;
+            align-items: center;
+            .checkbox{
+                display: inline-block;
+                position: relative;
+                width: 20px;
+                height: 20px;
+                background-color: #281D1D;
+                border-radius: 3px;
+                margin-right: 10px;
+                cursor: pointer;
+                .checkCircle{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 8px;
+                    background: #C4C4C4;
+                }
+            }
+        }
+    }
+
+    .grid{
+        width: 80%;
+        padding-top: 5vh;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: repeat(6, 11vh);
+        grid-gap: 1px;
+        .design{
+            background: #281D1D !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .edit{
+            background: #3D1C1C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .video{
+            background: #3D1111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .frontend{
+            background: #22281D;
+            transition: 0.5s;
+        }
+        .front{
+            background: #263D24;
+            transition: 0.5s;
+        }
+        .backend{
+            background: #0D303A;
+            transition: 0.5s;
+        }
+        .marketing{
+            background: #4B0249;
+            transition: 0.5s;
+        }
+
+        // seperated
+
+        #design6, #design7, #design8, #design9, #design10{
+            grid-row: 2 / 3;
+        }
+
+        #edit7, #edit8, #edit9, #edit10, #edit11, #edit12{
+            grid-row: 2 / 3;
+        }
+
+        #video7, #video8, #video9, #video10, #video11{
+            grid-row: 3 / 4;
+        }
+        #video7, #video12{
+            grid-column: 10 / 11;
+        }
+        #video8, #video13{
+            grid-column: 11 / 12;
+        }
+        #video9, #video14{
+            grid-column: 12 / 13;
+        }
+        #video10, #video15{
+            grid-column: 13 / 14;
+        }
+        #video11, #video16{
+            grid-column: 14 / 15;
+        }
+        #video12, #video13, #video14, #video15, #video16{
+            grid-row: 4 / 5;
+        }
+
+
+        #frontend7, #frontend8, #frontend9, #frontend10, #frontend11, #frontend12{
+            grid-row: 4 / 5;
+        }
+
+
+        #front1, #front2, #front3, #front4, #front5, #front6{
+            grid-row: 5 / 6;
+        }
+        #front7, #front8, #front9, #front10, #front11, #front12{
+            grid-row: 6 / 7;
+        }
+
+        #backend10, #backend11, #backend12{
+            grid-row: 6 / 7;
+        }
+    }
+}
