@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.root{
+    padding-top: 10vh;
+    background-color: black;
+    .howToContact{
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 5vh;
+        padding-bottom: 5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .info{
+            flex: 2;
+            position: relative;
+            .infoTop{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                flex-wrap: wrap;
+                padding-right: 15%;
+                div{
+                    margin: 10px 0;
+                    p{
+                        color: rgba(255, 255, 255, 0.8);
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    h1{
+                        color: white;
+                        font-weight: bold;
+                        font-size: 32px;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                }
+            }
+            .infoBottom{
+                padding: 3vh 0;
+                width: 70%;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                a{
+                    margin: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 28px;
+                        margin-right: 1rem;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: rgba(255, 255, 255, 0.5);
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif;
+                        transition: .1s;
+                        &:hover{
+                            color: #EC1C24;
+                        }
+                    }
+                }
+            }
+        }
+        .icons{
+            position: absolute;
+            width: 40%;
+            left: 0;
+            bottom: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: 32px;
+            }
+        }
+        .form{
+            position: relative;
+            flex: 1;
+            display: block;
+            .littleInput,
+            .bigInput{
+                width: 100%;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                background: none;
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                padding: 1em;
+                margin: 15px 0;
+                outline: 0;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+            .bigInput{
+                min-height: 150px;
+                resize: none;
+            }
+            .submitInput{
+                width: 100%;
+                padding: 1em;
+                border: 1px solid rgba(236, 28, 36, 0.4);
+                border-radius: 5px;
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color: rgba(236, 28, 36, 0.5);
+                background: none;
+                cursor: pointer;
+                transition: .3s;
+                &:hover{
+                    color: white;
+                    background: rgba(236, 28, 36, 0.5);
+                }
+            }
+        }
+    }
+}

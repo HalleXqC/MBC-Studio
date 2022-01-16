@@ -4,8 +4,15 @@ import Title from '../../Components/Title/Title'
 import LongBtn from '../../Components/LongBtn/LongBtn'
 import Cases from '../../Components/Cases/Cases'
 import BetweenTitle from '../../Components/BetweenTitle/BetweenTitle'
+import { useState } from 'react'
+import Process from '../../Components/Process/Process'
+import Reviews from '../../Components/Reviews/Reviews'
+import Form from '../../Components/Form/Form'
 
 const Main = () => {
+
+    const [checkbox, setCheckbox] = useState('')
+
     return (
         <div className={cls.root}>
             <section className={cls.header}>
@@ -36,6 +43,69 @@ const Main = () => {
                     </div>
                 </div>
             </section>
+            <section className={cls.tech}>
+                <BetweenTitle content="Technologies & Tools" color="white"/>
+                <ul>
+                    <li>
+                        <span 
+                            className={cls.checkbox} 
+                            onClick={() => setCheckbox('frontend')} 
+                        >
+                            {checkbox === 'frontend' ? (
+                                <span className={cls.checkCircle}></span>
+                            ) : null}
+                        </span> 
+                        Frontend
+                    </li>
+                    <li>
+                        <span 
+                            className={cls.checkbox} 
+                            onClick={() => setCheckbox('design')} 
+                        >
+                            {checkbox === 'design' ? (
+                                <span className={cls.checkCircle}></span>
+                            ) : null}
+                        </span> 
+                        Ux & Ui
+                    </li>
+                    <li>
+                        <span 
+                            className={cls.checkbox} 
+                            onClick={() => setCheckbox('video')} 
+                        >
+                            {checkbox === 'video' ? (
+                                <span className={cls.checkCircle}></span>
+                            ) : null}
+                        </span> 
+                        VideoEditing
+                    </li>
+                    <li>
+                        <span 
+                            className={cls.checkbox} 
+                            onClick={() => setCheckbox('backend')} 
+                        >
+                            {checkbox === 'backend' ? (
+                                <span className={cls.checkCircle}></span>
+                            ) : null}
+                        </span> 
+                        Backend
+                    </li>
+                    <li>
+                        <span 
+                            className={cls.checkbox} 
+                            onClick={() => setCheckbox('marketing')}
+                        >
+                            {checkbox === 'marketing' ? (
+                                <span className={cls.checkCircle}></span>
+                            ) : null}
+                        </span> 
+                        Marketing
+                    </li>
+                </ul>
+            </section>
+            <Process/>
+            <Reviews/>
+            <Form/>
         </div>
     )
 }
