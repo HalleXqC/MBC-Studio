@@ -1,22 +1,23 @@
+import cls from './Backend.module.scss'
+import Title from '../../Components/Title/Title'
+import StackText from '../../Components/StackText/StackText'
+import StackBlock from '../../Components/StackBlock/StackBlock'
 import Benefits from '../../Components/Benefits/Benefits'
 import BetweenTitle from '../../Components/BetweenTitle/BetweenTitle'
-import StackBlock from '../../Components/StackBlock/StackBlock'
-import StackText from '../../Components/StackText/StackText'
-import Title from '../../Components/Title/Title'
-import cls from './Frontend.module.scss'
+import LongCase from '../../Components/LongCase/LongCase'
 import LongBtn from '../../Components/LongBtn/LongBtn'
 import Form from '../../Components/Form/Form'
-import LongCase from '../../Components/LongCase/LongCase'
 
-const Frontend = () => {
+const Backend = () => {
     return (
         <div className={cls.root}>
-            <section className={cls.header} style={{background: "url('/img/header_front_bg.jpg') center / cover"}}>
-                <Title redText="Frontend" text1="Solutions" text2="for Business Growth" littleText="Ensure Your Business Growth with Our Robust Frontend Solutions"/>
+            <section className={cls.header} style={{background: "url('/img/backend_bg.jpg') center / cover"}}>
+                <Title redText="Backend" text1="Solutions" text2="for Business Growth" littleText="Ensure Your Business Growth with Our Robust Ux/Ui Solutions"/>
             </section>
             <section className={cls.stacks}>
                 <StackText content="With years of experience, deepknowledge of various tools and technologies, we build creative solutions that will allow you to scale up your business and design."/>
-                <StackBlock 
+
+                <StackBlock
                     title={{
                         content: "Tech Stack We Love to Use",
                         color: "white"
@@ -42,7 +43,7 @@ const Frontend = () => {
                         title: "Python"
                     }}
                 />
-                <StackBlock 
+                <StackBlock
                     title={{
                         content: "The tools we use",
                         color: "white"
@@ -97,9 +98,9 @@ const Frontend = () => {
                 <LongCase firstLine="The growth of" secondLine="IT Academy.kg" text="The It Academy in the Kyrgyzstan center of bishkek"/>
                 <LongBtn content="See more case studies" color="white"/>
             </section>
-            <Form/>
+                <Form/>
         </div>
     )
 }
 
-export default Frontend
+export default Backend

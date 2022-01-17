@@ -5,8 +5,8 @@ import cls from './Benefits.module.scss'
 const Benefits = ({content}) => {
     return (
         <div className={cls.root}>
-            <div classNamee={cls.title}>
-                <BetweenTitle content="Benefits of Working with MBC UX UI Developers" color="black"/>
+            <div className={cls.title}>
+                <BetweenTitle content={content.title} color="black"/>
             </div>
             <div className={cls.benefits}>
                 <SingleBenefit content={content.benefit1}/>
