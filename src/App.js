@@ -7,6 +7,7 @@ import Design from "./pages/Design/Design"
 import Backend from "./pages/Backend/Backend"
 import VideoEdit from "./pages/VideoEdit/VideoEdit"
 import CasesPage from "./pages/CasesPage/CasesPage"
+import Prices from "./pages/Prices/Prices"
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <Route path="/backend" exact element={<Backend/>}/>
                 <Route path="/videoediting" exact element={<VideoEdit/>}/>
                 <Route path="/cases" exact element={<CasesPage/>}/>
+                <Route path="/prices" exact element={<Prices/>}/>
             </Routes>
         </>
     )

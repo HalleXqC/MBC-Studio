@@ -1,0 +1,51 @@
+.root{
+    padding: 3vh 0;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    .pricesBlock{
+        margin: 3rem 0;
+        position: relative;
+        width: 100%;
+        padding: 5%;
+        background: #26261F;
+        display: flex;
+        justify-content: space-between;
+        .priceLine{
+            width: 30%;
+            position: relative;
+            &>*{
+                color: white;
+            }
+            .priceTitle{
+                font-size: 32px;
+                font-weight: bold;
+            }
+            .pricePrice{
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .priceDescription{
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .priceList{
+                padding-top: 1rem;
+                margin-bottom: 0.5rem;
+                list-style-type: disc !important;
+                li{
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+            .button{
+                width: 100%;
+                border: 1px solid white;
+                text-align: center;
+                padding: 10px 0;
+                font-size: 18px;
+                background: none;
+            }
+        }
+    }
+}

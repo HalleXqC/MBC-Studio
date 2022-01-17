@@ -18,6 +18,14 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: 15px;
             align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                color: white;
+            }
+            &:hover > .checkbox{
+                background-color: #2e1919;
+            }
             .checkbox{
                 display: inline-block;
                 position: relative;
@@ -26,7 +34,6 @@
                 background-color: #281D1D;
                 border-radius: 3px;
                 margin-right: 10px;
-                cursor: pointer;
                 .checkCircle{
                     position: absolute;
                     left: 50%;

@@ -1,19 +1,32 @@
 import cls from './Tech.module.scss'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import BetweenTitle from '../BetweenTitle/BetweenTitle'
 
 const Tech = () => {
 
-    const [checkbox, setCheckbox] = useState('all')
+    const [checkbox, setCheckbox] = useState('all');
+
+    const ref = useRef();
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+            if(checkbox !== 'all' && ref.current && !ref.current.contains(e.target)){
+                setCheckbox('all');
+            }
+        }
+        document.addEventListener('click', checkIfClickedOutside)
+        return () => {
+            document.removeEventListener('click', checkIfClickedOutside)
+        }
+    }, [checkbox])
+
 
     return (
         <section className={cls.tech}>
             <BetweenTitle content="Technologies & Tools" color="white"/>
             <ul>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('design')} >
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('design')} 
                     >
                         {checkbox === 'design' ? (
                             <span className={cls.checkCircle}></span>
@@ -21,10 +34,9 @@ const Tech = () => {
                     </span> 
                     Ux & Ui
                 </li>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('frontend')}>
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('frontend')} 
                     >
                         {checkbox === 'frontend' ? (
                             <span className={cls.checkCircle}></span>
@@ -32,10 +44,9 @@ const Tech = () => {
                     </span> 
                     Frontend
                 </li>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('frontend2')} >
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('frontend2')} 
                     >
                         {checkbox === 'frontend2' ? (
                             <span className={cls.checkCircle}></span>
@@ -43,10 +54,9 @@ const Tech = () => {
                     </span> 
                     Frontend2
                 </li>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('videoediting')} >
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('videoediting')} 
                     >
                         {checkbox === 'videoediting' ? (
                             <span className={cls.checkCircle}></span>
@@ -54,10 +64,9 @@ const Tech = () => {
                     </span> 
                     VideoEditing
                 </li>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('videoediting2')} >
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('videoediting2')} 
                     >
                         {checkbox === 'videoediting2' ? (
                             <span className={cls.checkCircle}></span>
@@ -65,10 +74,9 @@ const Tech = () => {
                     </span> 
                     VideoEditing2
                 </li>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('backend')} >
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('backend')} 
                     >
                         {checkbox === 'backend' ? (
                             <span className={cls.checkCircle}></span>
@@ -76,10 +84,9 @@ const Tech = () => {
                     </span> 
                     Backend
                 </li>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('marketing')}>
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('marketing')}
                     >
                         {checkbox === 'marketing' ? (
                             <span className={cls.checkCircle}></span>
@@ -87,10 +94,9 @@ const Tech = () => {
                     </span> 
                     Marketing
                 </li>
-                <li>
+                <li ref={ref} onClick={() => setCheckbox('all')}>
                     <span 
                         className={cls.checkbox} 
-                        onClick={() => setCheckbox('all')}
                     >
                         {checkbox === 'all' ? (
                             <span className={cls.checkCircle}></span>
