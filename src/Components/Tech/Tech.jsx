@@ -1,10 +1,12 @@
 import cls from './Tech.module.scss'
 import { useState, useEffect, useRef } from 'react'
 import BetweenTitle from '../BetweenTitle/BetweenTitle'
+import useWindowDimensions from '../getWindowFunc/useWindowDimension'
 
 const Tech = () => {
 
     const [checkbox, setCheckbox] = useState('all');
+    const {width} = useWindowDimensions()
 
     const ref = useRef();
     useEffect(() => {
@@ -64,16 +66,18 @@ const Tech = () => {
                     </span> 
                     VideoEditing
                 </li>
-                <li ref={ref} onClick={() => setCheckbox('videoediting2')} >
-                    <span 
-                        className={cls.checkbox} 
-                    >
-                        {checkbox === 'videoediting2' ? (
-                            <span className={cls.checkCircle}></span>
-                        ) : null}
-                    </span> 
-                    VideoEditing2
-                </li>
+                {width > 850 ? (
+                    <li ref={ref} onClick={() => setCheckbox('videoediting2')} >
+                        <span 
+                            className={cls.checkbox} 
+                        >
+                            {checkbox === 'videoediting2' ? (
+                                <span className={cls.checkCircle}></span>
+                            ) : null}
+                        </span> 
+                        VideoEditing2
+                    </li>
+                ) : null}
                 <li ref={ref} onClick={() => setCheckbox('backend')} >
                     <span 
                         className={cls.checkbox} 
@@ -94,20 +98,10 @@ const Tech = () => {
                     </span> 
                     Marketing
                 </li>
-                <li ref={ref} onClick={() => setCheckbox('all')}>
-                    <span 
-                        className={cls.checkbox} 
-                    >
-                        {checkbox === 'all' ? (
-                            <span className={cls.checkCircle}></span>
-                        ) : null}
-                    </span> 
-                    All
-                </li>
             </ul>
             <div className={cls.grid}>
                 {/* Design */}
-                <div className={cls.design} id={cls.design1} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ><img src="/img/figma.png" alt="figma"/></div>
+                <div className={cls.design} id={cls.design1} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ><img src="/img/figma.png" className={cls.specialImg} alt="figma"/><p>Figma</p></div>
                 <div className={cls.design} id={cls.design2} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div> 
                 <div className={cls.design} id={cls.design3} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.design} id={cls.design4} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
@@ -117,9 +111,15 @@ const Tech = () => {
                 <div className={cls.design} id={cls.design8} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.design} id={cls.design9} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.design} id={cls.design10} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
+                {width <= 510 ? (
+                    <>
+                        <div className={cls.design} id={cls.design11} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
+                        <div className={cls.design} id={cls.design12} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "design" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
+                    </>
+                ) : null}
                 {/* VideoEditing */}
-                <div className={cls.edit} id={cls.edit1} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ><img src="/img/premierepro.png" alt="premiere-pro" /></div>
-                <div className={cls.edit} id={cls.edit2} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
+                <div className={cls.edit} id={cls.edit1} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ><img src="/img/premierepro.png" alt="premiere-pro" /><p>Premiere Pro</p></div>
+                <div className={cls.edit} id={cls.edit2} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} >{width <= 850 && (<><img src="/img/webstorm.png" alt="webstorm" /><p>Webstorm</p></>)}</div>
                 <div className={cls.edit} id={cls.edit3} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.edit} id={cls.edit4} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.edit} id={cls.edit5} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
@@ -131,7 +131,7 @@ const Tech = () => {
                 <div className={cls.edit} id={cls.edit11} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.edit} id={cls.edit12} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 {/* VideoEditing2 */}
-                <div className={cls.video} id={cls.video1} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting2" ? {opacity: "1"} : {opacity: "0.5"}} ><img src="/img/webstorm.png" alt="webstorm" /></div>
+                <div className={cls.video} id={cls.video1} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting2" ? {opacity: "1"} : {opacity: "0.5"}} >{width >= 850 ? (<><img src="/img/webstorm.png" alt="webstorm" /><p>Webstorm</p></>) : null} </div>
                 <div className={cls.video} id={cls.video2} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting2" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.video} id={cls.video3} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting2" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.video} id={cls.video4} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "videoediting2" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
@@ -197,8 +197,6 @@ const Tech = () => {
                 <div className={cls.marketing} id={cls.marketing8} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "marketing" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.marketing} id={cls.marketing9} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "marketing" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
                 <div className={cls.marketing} id={cls.marketing10} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "marketing" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
-                <div className={cls.marketing} id={cls.marketing11} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "marketing" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
-                <div className={cls.marketing} id={cls.marketing12} style={checkbox === 'all' ? {opacity: "1"} : checkbox === "marketing" ? {opacity: "1"} : {opacity: "0.5"}} ></div>
             </div>
         </section>
     )

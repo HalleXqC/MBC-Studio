@@ -1,5 +1,5 @@
 .root{
-    width: 75%;
+    width: 80%;
     position: relative;
     margin: 0 auto;
     padding-top: 3rem;
@@ -9,11 +9,6 @@
         color: white;
         position: relative;
         z-index: 5;
-    }
-
-    .text1,
-    .text2,
-    .text3{
         font-size: 110px;
         line-height: 120px;
     }
@@ -41,5 +36,137 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
+        padding-top: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 1400px){
+    .root{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1312px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 95px;   
+            line-height: 105px;
+        }
+        .rhombus{
+            width: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: 1136px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 90px;   
+            line-height: 100px;
+        }
+        .rhombus{
+            width: 320px;
+        }
+    }
+}
+
+@media screen and (max-width: 1077px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 80px;   
+            line-height: 90px;
+        }
+        .rhombus{
+            width: 280px;
+        }
+    }
+}
+
+@media screen and (max-width: 955px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 70px;   
+            line-height: 80px;
+        }
+        .rhombus{
+            width: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 837px){
+    .root{
+        width: 90%;
+        .text1,
+        .text2,
+        .text3{
+            font-size: 70px;   
+            line-height: 80px;
+        }
+        .rhombus{
+            width: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 787px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 55px;   
+            line-height: 65px;
+        }
+        .rhombus{
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 628px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 40px;   
+            line-height: 50px;
+        }
+        .rhombus{
+            width: 160px;
+        }
+    }
+}
+
+@media screen and (max-width: 454px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 32px;   
+            line-height: 40px;
+        }
+        .rhombus{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .root{
+        .text1,
+        .text2,
+        .text3{
+            font-size: 28px;   
+            line-height: 38px;
+        }
     }
 }
