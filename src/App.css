@@ -8,3 +8,33 @@
     text-decoration: none;
     font-family: "Poppins", sans-serif;
 }
+
+.swiper-button-next{
+    color: white !important;
+}
+.swiper-button-prev{
+    color: white !important;
+}
+
+@media screen and (max-width: 600px){
+    .swiper-button-next, .swiper-button-prev{
+        top: 93% !important;
+    }
+    .swiper-button-next{
+        right: 35% !important;
+    }
+    .swiper-button-prev{
+        left: 35% !important;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        transform: scale(0.7) ;
+    }
+}
+@media screen and (max-width: 400px){
+    .swiper-button-next{
+        right: 25% !important;
+    }
+    .swiper-button-prev{
+        left: 25% !important;
+    }
+}

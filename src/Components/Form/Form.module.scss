@@ -113,3 +113,142 @@
         }
     }
 }
+
+@media screen and (max-width: 1400px){
+    .root{
+        .howToContact{
+            width: 85%;
+        }
+    }
+}
+
+@media screen and (max-width: 1320px){
+    .root{
+        .howToContact{
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1220px){
+    .root{
+        .howToContact{
+            .info{
+                .infoTop{
+                    padding-right: 10%;
+                    div{
+                        h1{
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .root{
+        padding-bottom: 10vh;
+        .howToContact{
+            flex-direction: column;
+            .icons{
+                bottom: 0;
+            }
+            .info{
+                width: 100%;
+                .infoTop{
+                    padding-right: 0;
+                }
+                .infoBottom{
+                    margin: 0 auto;
+                    padding: 1.5rem 0;
+                    border: none;
+                    width: 90%;
+                    a{
+                        img{
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+            .form{
+                width: 100%;
+            }
+            .icons{
+                width: 70%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 630px){
+    .root{
+        .howToContact{
+            .info{
+                .infoTop{
+                    div{
+                        h1{
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .infoBottom{
+                    width: 100%;
+                    padding: 1rem 0;
+                    a{
+                        img{
+                            margin-right: 0.5rem;
+                            width: 25px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .icons{
+                width: 100%;
+                left: 0;
+                transform: none;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 540px){
+    .root{
+        .howToContact{
+            .info{
+                .infoBottom{
+                    padding: 0.5rem 0;
+                    a{
+                        margin: 10px;
+                    }
+                }
+                .infoTop{
+                    flex-direction: column;
+                }
+            }
+            .form{
+                .littleInput,
+                .bigInput{
+                    padding: 0.7em;
+                    font-size: 13px;
+                }
+                .submitInput{
+                    padding: 0.7em;
+                    font-size: 15px;
+                }
+            }
+            .icons{
+                img{
+                    width: 27px;
+                }
+            }
+        }
+    }
+}

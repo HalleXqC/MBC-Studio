@@ -5,7 +5,6 @@ import cls from './Cases.module.scss'
 const Cases = () => {
 
     const { height, width } = useWindowDimensions()
-    console.log(width, height);
 
     return (
                 

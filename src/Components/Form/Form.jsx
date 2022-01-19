@@ -30,6 +30,10 @@ const Form = () => {
                             <img src="/img/telegram.png" alt="telegram-icon" />
                             <p>Telegram</p>
                         </a>
+                        <a target="_blank" href="">
+                            <img src="/img/instagram.png" alt="instagram-icon" />
+                            <p>Instagram</p>
+                        </a>
                     </div>
                 </div>
                 <div className={cls.icons}>

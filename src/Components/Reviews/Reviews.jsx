@@ -5,26 +5,54 @@ import SwiperCore, {Navigation} from 'swiper'
 import SingleReview from '../SingleReview/SingleReview';
 import 'swiper/css';
 import "swiper/css/navigation"
+import { useState } from 'react';
+import useWindowDimensions from '../getWindowFunc/useWindowDimension';
 
 SwiperCore.use([Navigation])
 
 const Reviews = () => {
 
+    const [currentSlide, setCurrentSlide] = useState('')
+    const [slidesNumber, setSlidesNumber] = useState('')
+    const {width} = useWindowDimensions()
     const slides = []
 
-    for(let i = 0; i < 2; i++){
-        slides.push(
-            <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide}>
-                <div className={cls.inlineSlide}>
-                    <SingleReview/>
-                    <SingleReview/>
-                </div>
-                <div className={cls.inlineSlide}>
-                    <SingleReview/>
-                    <SingleReview/>
-                </div>
-            </SwiperSlide>
-        )
+    if(width >= 888){
+        for(let i = 0; i < 2; i++){
+            slides.push(
+                <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
+                    <div className={cls.inlineSlide}>
+                        <SingleReview/>
+                        <SingleReview/>
+                    </div>
+                    <div className={cls.inlineSlide}>
+                        <SingleReview/>
+                        <SingleReview/>
+                    </div>
+                </SwiperSlide>
+            )
+        }
+    }else if(width >= 600){
+        for(let i = 0; i < 4; i++){
+            slides.push(
+                <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
+                    <div className={cls.inlineSlide}>
+                        <SingleReview/>
+                        <SingleReview/>
+                    </div>
+                </SwiperSlide>
+            )
+        }
+    }else{
+        for(let i = 0; i < 8; i++){
+            slides.push(
+                <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
+                    <div className={cls.inlineSlide}>
+                        <SingleReview/>
+                    </div>
+                </SwiperSlide>
+            )
+        }
     }
 
     return (
@@ -42,9 +70,15 @@ const Reviews = () => {
                 </ul>
                 <p>(13)</p> 
             </div>
-            <Swiper id={cls.main} className={cls.swiper} navigation={true}>
+            <Swiper id={cls.main} className={cls.swiper} navigation={true} onInit={e => {
+                setCurrentSlide(e.realIndex + 1)
+                setSlidesNumber(e.slides.length)
+            }} onSlideChange={e => setCurrentSlide(e.realIndex + 1)}>
                 {slides}
             </Swiper>
+            {width <= 600 ? (
+                <div className={cls.currentSlides}>{currentSlide} of {slidesNumber}</div>
+            ) : ''}
         </div>
     )
 }

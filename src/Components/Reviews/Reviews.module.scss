@@ -28,6 +28,9 @@
             display: flex;
             align-items: center;
             li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 img{
                     width: 20px;
                 }
@@ -51,6 +54,69 @@
                 flex-direction: column;
                 align-items: center;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .root{
+        .bottomTitle{
+            width: 34%;
+        }
+        .swiper{
+            width: 85% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .root{
+        .exampleReview{
+            width: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 888px){
+    .root{
+        .bottomTitle{
+            width: 50%;
+        }
+        .swiper{
+            width: 90% !important;
+            .swiperSlide{
+                .inlineSlide{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .root{
+        .swiper{
+            .swiperSlide{
+                padding-bottom: 2rem;
+                .inlineSlide{
+                    width: 100%;
+                }
+            }
+        }
+        .currentSlides{
+            color: white;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 2%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+    .root{
+        .currentSlides{
+            font-size: 14px;
         }
     }
 }
