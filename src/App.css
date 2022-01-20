@@ -16,7 +16,7 @@
     color: white !important;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
     .swiper-button-next, .swiper-button-prev{
         top: 93% !important;
     }
