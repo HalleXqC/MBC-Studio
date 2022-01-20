@@ -28,3 +28,51 @@
         }
     }
 }
+
+@media screen and (max-width: 1064px){
+    .root{
+        .stack{
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    .root{
+        .stack{
+            div{
+                img{
+                    margin-bottom: 0.25rem;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 555px){
+    .root{
+        .stack{
+            width: 90%;
+            flex-wrap: wrap;
+            padding: 2.5vh 0;
+            div{
+                margin: 10px;
+                width: 20%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px){
+    .root{
+        .stack{
+            div{
+                p{
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

@@ -95,7 +95,9 @@ const Backend = () => {
             </section>
             <section className={cls.case}>
                 <BetweenTitle content="Case Studies" color="white"/>
-                <LongCase firstLine="The growth of" secondLine="IT Academy.kg" text="The It Academy in the Kyrgyzstan center of bishkek"/>
+                <div className={cls.caseBlock}>
+                    <LongCase firstLine="The growth of" secondLine="IT Academy.kg" text="The It Academy in the Kyrgyzstan center of bishkek"/>
+                </div>
                 <LongBtn content="See more case studies" color="white"/>
             </section>
                 <Form/>

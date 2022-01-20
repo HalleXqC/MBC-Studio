@@ -15,5 +15,30 @@
         width: 100%;
         padding-top: 10vh;
         padding-bottom: 10rem;
+        .caseBlock{
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .root{
+        .case{
+            .caseBlock{
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 837px){
+    .root{
+        .case{
+            .caseBlock{
+                width: 90%;
+            }
+        }
     }
 }
