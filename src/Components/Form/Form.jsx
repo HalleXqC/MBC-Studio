@@ -1,10 +1,12 @@
 import cls from './Form.module.scss'
 import BetweenTitle from '../BetweenTitle/BetweenTitle'
 
-const Form = () => {
+const Form = ({burger}) => {
     return (
         <div className={cls.root}>
-            <BetweenTitle content="Get in touch" color="#EC1C24"/>
+            {burger ? '' : (
+                <BetweenTitle content="Get in touch" color="#EC1C24"/>
+            )}
             <div className={cls.howToContact}>
                 <div className={cls.info}>
                     <div className={cls.infoTop}>
@@ -43,7 +45,7 @@ const Form = () => {
                     <a target="_blank" href=""><img src="/img/youtube.png" alt="youtube" /></a>
                     <a target="_blank" href=""><img src="/img/linkedIn.png" alt="linkedin" /></a>
                 </div>
-                <form className={cls.form}>
+                <form className={cls.form} style={burger ? {display: "none"} : null}>
                     <input placeholder="Jhon Smith" type="text" className={cls.littleInput}/>
                     <input placeholder="Your gmail*" type="text" className={cls.littleInput}/>
                     <textarea placeholder="Describe your project..." type="text" className={cls.bigInput}></textarea>

@@ -3,15 +3,22 @@ import { Link } from 'react-router-dom'
 import CustomLink from '../CustomLink/CustomLink'
 import { useState } from 'react'
 import { FiChevronDown as ArrowDown} from 'react-icons/fi'
+import useWindowDimensions from '../getWindowFunc/useWindowDimension'
+import Burger from '../Burger/Burger'
 
 const Nav = () => {
 
     const [isOpenServices, setIsOpenServices] = useState(false)
     const [isOpenLang, setIsOpenLang] = useState(false)
+    const { width } = useWindowDimensions()
+    const [activeBurger, setActiveBurger] = useState(false)
 
     return (
         <div className={cls.root}>
             <nav className={cls.nav} id={isOpenServices ? cls.navBig : null}>
+                {width <= 820 ? (
+                    <h1 className={cls.title}>LOGO</h1>
+                ) : ''}
                 <div className={cls.navLeft}>
                     <h1>LOGO</h1>
                     <ul>
@@ -66,7 +73,13 @@ const Nav = () => {
                     <div className={cls.number}>+996 703 00 00 00</div>
                     <div className={cls.btnDiv}><button className={cls.contactBtn}>Contact</button></div>
                 </div>
+                <button className={cls.burgerBtn} onClick={() => setActiveBurger(!activeBurger)}>
+                    <div className={cls.bar} id={cls.bar1}></div>
+                    <div className={cls.bar} id={cls.bar2}></div>
+                    <div className={cls.bar} id={cls.bar3}></div>
+                </button>
             </nav>
+            <Burger active={activeBurger} closeBtn={setActiveBurger}/>
         </div>
     )
 }

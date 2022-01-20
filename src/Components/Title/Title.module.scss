@@ -148,10 +148,11 @@
 
 @media screen and (max-width: 454px){
     .root{
+        text-align: center;
         .text1,
         .text2,
         .text3{
-            font-size: 32px;   
+            font-size: 35px;   
             line-height: 40px;
         }
         .rhombus{
@@ -165,7 +166,7 @@
         .text1,
         .text2,
         .text3{
-            font-size: 28px;   
+            font-size: 32px;   
             line-height: 38px;
         }
     }
