@@ -48,9 +48,9 @@ const Burger = ({active, closeBtn}) => {
                         </ol>
                     </li>
                     <hr />
-                    <li><CustomLink className={cls.link} to="/prices">Prices</CustomLink></li>
+                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/prices">Prices</CustomLink></li>
                     <hr />
-                    <li><CustomLink className={cls.link} to="/cases">Cases</CustomLink></li>
+                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/cases">Cases</CustomLink></li>
                     <hr />
                 </ul>
             </div>
