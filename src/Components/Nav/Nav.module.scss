@@ -5,7 +5,6 @@
     left: 0;
     z-index: 10;
     .nav{
-        position: relative;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -283,7 +282,6 @@
         top: 0;
         .nav{
             padding-top: 1rem;
-            position: relative;
             .navLeft,
             .navRight{
                 display: none;

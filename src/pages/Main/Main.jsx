@@ -8,12 +8,15 @@ import Header from '../../Components/Header/Header'
 import cls from './Main.module.scss'
 import BetweenTitle from '../../Components/BetweenTitle/BetweenTitle'
 import LongBtn from '../../Components/LongBtn/LongBtn'
+import useWindowDimensions from "../../Components/getWindowFunc/useWindowDimension"
 
 const Main = () => {
 
+    const {width} = useWindowDimensions()
+
     return (
         <div className={cls.root}>
-            <Header/>
+            <Header width={width}/>
             <div className={cls.cases}>
                 <BetweenTitle content="Cases" color="white"/>
                 <Cases/>

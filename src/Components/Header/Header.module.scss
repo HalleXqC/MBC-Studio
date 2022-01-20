@@ -96,6 +96,7 @@
 
 @media screen and (max-width: 454px){
     .header{
+        overflow-x: hidden;
         .bottomText{
             display: none;
         }
@@ -109,7 +110,7 @@
             text-align: center;
             padding-top: 5vh;
         }
-        .orderBtn{
+        .orderButton{
             position: relative;
             color: #EC1C24;
             font-size: 16px;
@@ -123,6 +124,12 @@
             margin-top: 2rem;
             margin-left: 50%;
             transform: translateX(-50%);
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background: #EC1C24;
+                color: white;
+            }
         }
     }
 }
