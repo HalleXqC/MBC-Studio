@@ -28,7 +28,7 @@ const Burger = ({active, closeBtn}) => {
                 <ul>
                     <li 
                         className={cls.servicesLink}
-                        style={isOpenServices ? {marginBottom: `${height * 2}px`} : {marginBottom: "0"}}
+                        style={isOpenServices ? {marginBottom: `${height * 1}px`} : {marginBottom: "0"}}
                     >
                         <button 
                             className={cls.servicesBtn} 
