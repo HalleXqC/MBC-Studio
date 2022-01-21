@@ -24,35 +24,37 @@ const Burger = ({active, closeBtn}) => {
                 <Link to="/" className={cls.h1}>Logo</Link>
                 <button onClick={() => closeBtn(false)} type="button"><Plus className={cls.icon}/></button>
             </div>
-            <div className={cls.navLeft}>
-                <ul>
-                    <li 
-                        className={cls.servicesLink}
-                        style={isOpenServices ? {marginBottom: `${height * 1}px`} : {marginBottom: "0"}}
-                    >
-                        <button 
-                            className={cls.servicesBtn} 
-                            onClick={() => {
-                                setIsOpenServices(!isOpenServices)
-                            }}
+            {height ? (
+                <div className={cls.navLeft}>
+                    <ul>
+                        <li 
+                            className={cls.servicesLink}
+                            style={isOpenServices ? {marginBottom: `${height * 1}px`} : {marginBottom: "0"}}
                         >
-                            Services
-                        </button>
+                            <button 
+                                className={cls.servicesBtn} 
+                                onClick={() => {
+                                    setIsOpenServices(!isOpenServices)
+                                }}
+                            >
+                                Services
+                            </button>
 
-                        <ol ref={listRef} style={isOpenServices ? {opacity: "1"} : {opacity: "0"}}>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/frontend">Frontend</CustomLink></li>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/ux-ui">Ux & Ui</CustomLink></li>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/videoediting">Videoediting</CustomLink></li>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/backend">Backend</CustomLink></li>
-                        </ol>
-                    </li>
-                    <hr />
-                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/prices">Prices</CustomLink></li>
-                    <hr />
-                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/cases">Cases</CustomLink></li>
-                    <hr />
-                </ul>
-            </div>
+                            <ol ref={listRef} style={isOpenServices ? {opacity: "1"} : {opacity: "0"}}>
+                                <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/frontend">Frontend</CustomLink></li>
+                                <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/ux-ui">Ux & Ui</CustomLink></li>
+                                <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/videoediting">Videoediting</CustomLink></li>
+                                <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/backend">Backend</CustomLink></li>
+                            </ol>
+                        </li>
+                        <hr />
+                        <li className={cls.anotherLink}><CustomLink className={cls.link} to="/prices">Prices</CustomLink></li>
+                        <hr />
+                        <li className={cls.anotherLink}><CustomLink className={cls.link} to="/cases">Cases</CustomLink></li>
+                        <hr />
+                    </ul>
+                </div>
+            ) : ''}
             <button className={cls.orderBtn}>Order a project now</button>
             <div className={cls.lang}>
                 <img src="/img/globe_burger.png" alt="language" />
