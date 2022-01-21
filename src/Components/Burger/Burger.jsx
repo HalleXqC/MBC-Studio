@@ -16,7 +16,7 @@ const Burger = ({active, closeBtn}) => {
     };
     useEffect(() => {
         getListSize();
-    }, [])
+    }, [height, listRef])
 
     return (
         <div className={cls.root} id={active ? cls.active : null}>
