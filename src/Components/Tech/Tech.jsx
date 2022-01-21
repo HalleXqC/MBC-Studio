@@ -8,10 +8,16 @@ const Tech = () => {
     const [checkbox, setCheckbox] = useState('all');
     const {width} = useWindowDimensions()
 
-    const ref = useRef();
+    const ref1 = useRef();
+    const ref2 = useRef();
+    const ref3 = useRef();
+    const ref4 = useRef();
+    const ref5 = useRef();
+    const ref6 = useRef();
+    const ref7 = useRef();
     useEffect(() => {
         const checkIfClickedOutside = e => {
-            if(checkbox !== 'all' && ref.current && !ref.current.contains(e.target)){
+            if(checkbox !== 'all' && ref1.current && !ref1.current.contains(e.target) && ref2.current && !ref2.current.contains(e.target) && ref3.current && !ref3.current.contains(e.target) && ref4.current && !ref4.current.contains(e.target) && ref5.current && !ref5.current.contains(e.target) && ref6.current && !ref6.current.contains(e.target) && ref7.current && !ref7.current.contains(e.target)){
                 setCheckbox('all');
             }
         }
@@ -26,7 +32,7 @@ const Tech = () => {
         <section className={cls.tech}>
             <BetweenTitle content="Technologies & Tools" color="white"/>
             <ul>
-                <li ref={ref} onClick={() => setCheckbox('design')} >
+                <li ref={ref1} onClick={() => setCheckbox('design')} >
                     <span 
                         className={cls.checkbox} 
                     >
@@ -36,7 +42,7 @@ const Tech = () => {
                     </span> 
                     Ux & Ui
                 </li>
-                <li ref={ref} onClick={() => setCheckbox('frontend')}>
+                <li ref={ref2} onClick={() => setCheckbox('frontend')}>
                     <span 
                         className={cls.checkbox} 
                     >
@@ -46,7 +52,7 @@ const Tech = () => {
                     </span> 
                     Frontend
                 </li>
-                <li ref={ref} onClick={() => setCheckbox('frontend2')} >
+                <li ref={ref3} onClick={() => setCheckbox('frontend2')} >
                     <span 
                         className={cls.checkbox} 
                     >
@@ -56,7 +62,7 @@ const Tech = () => {
                     </span> 
                     Frontend2
                 </li>
-                <li ref={ref} onClick={() => setCheckbox('videoediting')} >
+                <li ref={ref4} onClick={() => setCheckbox('videoediting')} >
                     <span 
                         className={cls.checkbox} 
                     >
@@ -67,7 +73,7 @@ const Tech = () => {
                     VideoEditing
                 </li>
                 {width > 850 ? (
-                    <li ref={ref} onClick={() => setCheckbox('videoediting2')} >
+                    <li ref={ref5} onClick={() => setCheckbox('videoediting2')} >
                         <span 
                             className={cls.checkbox} 
                         >
@@ -78,7 +84,7 @@ const Tech = () => {
                         VideoEditing2
                     </li>
                 ) : null}
-                <li ref={ref} onClick={() => setCheckbox('backend')} >
+                <li ref={ref6} onClick={() => setCheckbox('backend')} >
                     <span 
                         className={cls.checkbox} 
                     >
@@ -88,7 +94,7 @@ const Tech = () => {
                     </span> 
                     Backend
                 </li>
-                <li ref={ref} onClick={() => setCheckbox('marketing')}>
+                <li ref={ref7} onClick={() => setCheckbox('marketing')}>
                     <span 
                         className={cls.checkbox} 
                     >
