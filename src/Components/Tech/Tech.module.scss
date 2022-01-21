@@ -272,6 +272,7 @@
 
 @media screen and (max-width: 510px){
     .tech{
+        width: 95%;
         .grid{
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: repeat(10, 8vh);
