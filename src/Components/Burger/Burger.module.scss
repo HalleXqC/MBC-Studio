@@ -7,7 +7,7 @@
     z-index: 100;
     width: 100%;
     transition: 0.5s;
-    height: 100vh;
+    min-height: 100vh;
     .floatingNav{
         position: absolute;
         background-color: #0F0F0F;
