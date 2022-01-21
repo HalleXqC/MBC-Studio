@@ -7,16 +7,6 @@ import { Link } from 'react-router-dom'
 const Burger = ({active, closeBtn}) => {
 
     const [isOpenServices, setIsOpenServices] = useState(false)
-    const listRef = useRef()
-    const [height, setHeight] = useState()
-
-    function getListSize(){
-        const newHeight = listRef.current.clientHeight;
-        setHeight(newHeight);
-    };
-    useEffect(() => {
-        getListSize();
-    }, [height, listRef])
 
     return (
         <div className={cls.root} id={active ? cls.active : null}>
@@ -28,7 +18,7 @@ const Burger = ({active, closeBtn}) => {
                 <ul>
                     <li 
                         className={cls.servicesLink}
-                        style={isOpenServices && height ? {marginBottom: `${height * 1}px`} : {marginBottom: "0"}}
+                        style={isOpenServices ? {marginBottom: `200px`} : {marginBottom: "0"}}
                     >
                         <button 
                             className={cls.servicesBtn} 
@@ -39,7 +29,7 @@ const Burger = ({active, closeBtn}) => {
                             Services
                         </button>
 
-                        <ol ref={listRef} style={isOpenServices ? {opacity: "1"} : {opacity: "0"}}>
+                        <ol style={isOpenServices ? {opacity: "1"} : {opacity: "0"}}>
                             <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/frontend">Frontend</CustomLink></li>
                             <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/ux-ui">Ux & Ui</CustomLink></li>
                             <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/videoediting">Videoediting</CustomLink></li>
