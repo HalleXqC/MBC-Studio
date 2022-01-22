@@ -1,6 +1,7 @@
 import cls from "./Process.module.scss"
 import BetweenTitle from "../BetweenTitle/BetweenTitle"
 import LongBtn from "../LongBtn/LongBtn"
+import ProgressCircle from "../ProgressCircle/ProgressCircle"
 
 const Process = () => {
     return (
@@ -41,24 +42,20 @@ const Process = () => {
             <section className={cls.metrics}>
                 <BetweenTitle content="Mbc studios' key metrics" color="black"/>
                 <div className={cls.inlineMetrics}>
-                    <div>
-                        <img src="/img/metrics1.png" alt="metrics"/>
-                        <h1>95k</h1>
+                    <div className={cls.div}>
+                        <ProgressCircle percentage={75} article="k"/>
                         <p>Hours worked</p>
                     </div>
-                    <div>
-                        <img src="/img/metrics2.png" alt="metrics"/>
-                        <h1>5</h1>
+                    <div className={cls.div}>
+                        <ProgressCircle percentage={5} article=""/>
                         <p>Years in business</p>
                     </div>
-                    <div>
-                        <img src="/img/metrics3.png" alt="metrics"/>
-                        <h1>45</h1>
+                    <div className={cls.div}>
+                        <ProgressCircle percentage={45} article=""/>
                         <p>Completed projects</p>
                     </div>
-                    <div>
-                        <img src="/img/metrics4.png" alt="metrics"/>
-                        <h1>24/7</h1>
+                    <div className={cls.div}>
+                        <ProgressCircle percentage={24} article="/7"/>
                         <p>Support available</p>
                     </div>
                 </div>

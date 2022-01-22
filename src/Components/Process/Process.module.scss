@@ -51,13 +51,8 @@
 .metrics{
     background-color: white;
     padding-top: 10vh;
-    padding-bottom: 5vh;
+    padding-bottom: 12vh;
     position: relative;
-
-
-    display: none;
-
-    
     .inlineMetrics{
         width: 80%;
         margin: 0 auto;
@@ -65,28 +60,15 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        div{
-            position: relative;
-            width: 20%;
-            text-align: center;
-            margin-bottom: 2rem;
-            img{
-                width: 130px;
-                height: 130px;
-                margin-bottom: 1rem;
-            }
-            h1{
-                font-size: 35px;
-                font-weight: bold;
-                position: absolute;
-                top: 22%;
-                left: 50%;
-                transform: translateX(-50%);
-                color: black;
-            }
+        .div{
+            width: 24%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             p{
                 font-size: 20px;
-                color: rgba(0, 0, 0, 0.9);
+                color: black;
                 font-weight: bold;
             }
         }
@@ -95,11 +77,8 @@
 
 @media screen and (max-width: 1200px){
     .root{
-        .process,
-        .inlineMetrics{
-            width: 85%;
-        }
         .process{
+            width: 85%;
             .inlineProcess{
                 div{
                     .arrow{
@@ -107,6 +86,11 @@
                     }
                 }
             }
+        }
+    }
+    .metrics{
+        .inlineMetrics{
+            width: 85%;
         }
     }
 }
@@ -125,6 +109,31 @@
                     p{
                         font-size: 14px;
                     }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px){
+    .metrics{
+        .inlineMetrics{
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 950px){
+    .metrics{
+        .inlineMetrics{
+            width: 95%;
+            .div{
+                position: relative;
+                width: 20%;
+                margin: 2rem 1rem;
+                text-align: center;
+                p{
+                    font-size: 18px;
+                    position: absolute;
+                    top: 90%;
                 }
             }
         }
@@ -162,7 +171,16 @@
         }
     }
 }
-
+@media screen and (max-width: 673px){
+    .metrics{
+        .inlineMetrics{
+            .div{
+                width: 40%;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
 @media screen and (max-width: 650px){
     .root{
         .process{
@@ -205,6 +223,28 @@
                         font-size: 18px;
                     }
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width: 470px){
+    .metrics{
+        .inlineMetrics{
+            .div{
+                margin-bottom: 3rem;
+                p{
+                    top: 80%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 385px){
+    .metrics{
+        .inlineMetrics{
+            .div{
+                width: 35%;
+                margin: 1rem 1;
             }
         }
     }
