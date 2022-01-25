@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom'
 
 
 const Nav = (props) => {
-    console.log(props)
     const dispatch = useDispatch()
     const {selectedLang: {navbar}} = useSelector(s => s.lang)
     const selectedLocalLang = localStorage.getItem('mbcLang');
