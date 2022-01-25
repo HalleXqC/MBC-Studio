@@ -1,12 +1,43 @@
 import cls from './Nav.module.scss'
-import { Link } from 'react-router-dom'
 import CustomLink from '../CustomLink/CustomLink'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FiChevronDown as ArrowDown} from 'react-icons/fi'
 import useWindowDimensions from '../getWindowFunc/useWindowDimension'
 import Burger from '../Burger/Burger'
+import { useDispatch , useSelector } from 'react-redux'
+import { ruLangActions , enLangActions } from '../../redux/langRedux/action'
+import { Link } from 'react-router-dom'
 
-const Nav = () => {
+
+
+const Nav = (props) => {
+    console.log(props)
+    const dispatch = useDispatch()
+    const {selectedLang: {navbar}} = useSelector(s => s.lang)
+    const selectedLocalLang = localStorage.getItem('mbcLang');
+
+    useEffect(() => {
+        const selectedLocalLang = localStorage.getItem('mbcLang');
+        if(selectedLocalLang == 'RU'){
+            dispatch(ruLangActions())
+        }else{
+            dispatch(enLangActions())
+        }
+    }, [dispatch])
+
+    
+
+    const handleChangeLangText = (lang) =>{
+        console.log(lang)
+        if(lang === 'RU'){
+            dispatch(ruLangActions())
+            localStorage.setItem('mbcLang' , 'RU')
+        }else{
+            dispatch(enLangActions())
+            localStorage.setItem('mbcLang', 'EN')
+        }
+    }
+
 
     const [isOpenServices, setIsOpenServices] = useState(false)
     const [isOpenLang, setIsOpenLang] = useState(false)
@@ -17,12 +48,12 @@ const Nav = () => {
         <div className={cls.root}>
             <nav className={cls.nav} id={isOpenServices ? cls.navBig : null}>
                 {width <= 820 ? (
-                    <h1 className={cls.title}>LOGO</h1>
+                    <Link className={cls.title} to="/">LOGO</Link>
                 ) : ''}
                 <div className={cls.navLeft}>
-                    <h1>LOGO</h1>
+                    <Link className={cls.h1} to="/">LOGO</Link>
                     <ul>
-                        <li><CustomLink className={cls.link} to="/">Home</CustomLink></li>
+                        <li><CustomLink className={cls.link} to="/">{navbar.home}</CustomLink></li>
                         <li className={cls.servicesLink}>
                             <button 
                                 className={cls.servicesBtn} 
@@ -31,7 +62,7 @@ const Nav = () => {
                                     setIsOpenServices(!isOpenServices)
                                 }}
                             >
-                                Services
+                                {navbar.services}
                                 <ArrowDown/>
                             </button>
 
@@ -42,8 +73,8 @@ const Nav = () => {
                                 <li><CustomLink className={cls.link} to="/backend">Backend</CustomLink></li>
                             </ol>
                         </li>
-                        <li><CustomLink className={cls.link} to="/prices">Prices</CustomLink></li>
-                        <li><CustomLink className={cls.link} to="/cases">Cases</CustomLink></li>
+                        <li><CustomLink className={cls.link} to="/prices">{navbar.prices}</CustomLink></li>
+                        <li><CustomLink className={cls.link} to="/cases">{navbar.cases}</CustomLink></li>
                     </ul>
                 </div>
                 <div className={cls.navRight}>
@@ -59,9 +90,9 @@ const Nav = () => {
                                     }}
                                 />
                             </button>
-                            <span className={cls.lang_en}>en</span>
+                            <span className={selectedLocalLang === 'EN' ? cls.lang_en_active : cls.lang_en} onClick={() => handleChangeLangText('EN')}>en</span>
                             <span className={cls.lang_stick}>|</span>
-                            <Link className={cls.lang_ru} to="/ru">ru</Link>
+                            <span className={selectedLocalLang === 'RU' ? cls.lang_ru_active : cls.lang_ru} onClick={() => handleChangeLangText('RU')}>ru</span>
                         </div>
                         <ol className={cls.langBottom} style={isOpenLang ? {display: "flex"} : {display: "none"}}>
                             <li><a href="#">Deutsch</a></li>

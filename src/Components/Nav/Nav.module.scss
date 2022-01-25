@@ -19,7 +19,7 @@
         .navLeft{
             width: 30%;
             padding-left: 4rem;
-            h1{
+            .h1{
                 color: white;
                 font-size: 40px;
                 font-weight: 700;
@@ -105,19 +105,36 @@
                     }
                     .lang_en,
                     .lang_ru,
+                    .lang_en_active,
+                    .lang_ru_active,
                     .lang_stick{
                         font-family: 'Montserrat', sans-serif;
                         font-size: 15px;
                         margin: 0 4px;
                         transform: translateY(-10%);
                     }
-                    .lang_en{
+                    .lang_en,
+                    .lang_ru,
+                    .lang_en_active,
+                    .lang_ru_active{
+                        cursor: pointer;
+                    }
+                    .lang_en_active{
                         color: white;
+                        font-weight: bold;
+                    }
+                    .lang_en{
+                        color: rgba(196, 196, 196, 0.6);
                     }
                     .lang_stick,
                     .lang_ru{
                         color: rgba(196, 196, 196, 0.6);
                     }
+                    .lang_ru_active{
+                        color:white;
+                        font-weight: bold;
+                    }
+                    
                 }
                 .langBottom{
                     position: absolute;
@@ -227,7 +244,7 @@
     .root{
         .nav{
             .navLeft{
-                h1{
+                .h1{
                     margin-right: 0.75rem;
                     font-size: 35px;
                 }

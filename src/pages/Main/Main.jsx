@@ -9,16 +9,17 @@ import cls from './Main.module.scss'
 import BetweenTitle from '../../Components/BetweenTitle/BetweenTitle'
 import LongBtn from '../../Components/LongBtn/LongBtn'
 import useWindowDimensions from "../../Components/getWindowFunc/useWindowDimension"
+import { useSelector } from 'react-redux'
 
 const Main = () => {
-
+    const {selectedLang:{cases}} = useSelector(s => s.lang)
     const {width} = useWindowDimensions()
 
     return (
         <div className={cls.root}>
             <Header width={width}/>
             <div className={cls.cases}>
-                <BetweenTitle content="Cases" color="white"/>
+                <BetweenTitle content={cases} color="white"/>
                 <Cases/>
                 <LongBtn content="See all works" color="white"/>
             </div>
