@@ -7,8 +7,7 @@ export const ruLangData = {
         videoediting: 'Монтаж видео',
 
         lang: "Русский",
-        orderBtn: "Закажи проект сейчас",
-        dreamsText: "Мы поможем осуществить ваши мечты."
+        orderBtn: "Закажи проект сейчас"
     },
     cases: {
         title: "Портфолио",
@@ -21,7 +20,9 @@ export const ruLangData = {
     },
     header: {
         bottomText: "Что мы делаем",
-        longBtn: "Пройти консультацию"
+        longBtn: "Пройти консультацию",
+        orderBtn: "Закажи проект сейчас",
+        dreamsText: "Мы поможем осуществить ваши мечты."
     },
     whoWeAre: {
         title: "Кто мы?",
