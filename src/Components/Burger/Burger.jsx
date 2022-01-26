@@ -46,7 +46,7 @@ const Burger = ({active, closeBtn, changeLang, selectedLang}) => {
                     <hr />
                 </ul>
             </div>
-            <button className={cls.orderBtn}>Order a project now</button>
+            <button className={cls.orderBtn}>{navbar.orderBtn}</button>
             <div className={cls.lang} onClick={() => {
                 if(selectedLang === "RU"){
                     changeLang('EN')
