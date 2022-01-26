@@ -33,7 +33,7 @@ const Tech = () => {
 
     return (
         <section className={cls.tech}>
-            <BetweenTitle content={tech.title} color="white"/>
+            <BetweenTitle content={tech.title   } color="white"/>
             <ul>
                 <li ref={ref1} onClick={() => setCheckbox('design')} >
                     <span 

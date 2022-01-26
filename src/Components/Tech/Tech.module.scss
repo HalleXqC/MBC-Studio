@@ -211,7 +211,6 @@
         ul{
             padding-top: 2vh;
             li{
-                font-size: 13px;
                 .checkbox{
                     width: 16px;
                     height: 16px;
@@ -335,6 +334,18 @@
             }
             #frontend11, #frontend12{
                 display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .tech{
+        .grid{
+            .design, .edit, .video, .frontend, .front, .backend, .marketing{
+                p{
+                    font-size: 7px;
+                }
             }
         }
     }

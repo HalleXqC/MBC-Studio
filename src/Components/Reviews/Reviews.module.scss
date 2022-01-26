@@ -112,7 +112,13 @@
         }
     }
 }
-
+@media screen and (max-width: 425px){
+    .root{
+        .bottomTitle{
+            width: 90%;
+        }
+    }
+}
 @media screen and (max-width: 400px){
     .root{
         .currentSlides{
