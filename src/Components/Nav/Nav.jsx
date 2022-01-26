@@ -18,6 +18,7 @@ const Nav = () => {
     useEffect(() => {
         if(!localStorage.getItem('mbcLang')){
             localStorage.setItem('mbcLang', 'EN')
+            dispatch(enLangActions())
         }else{
             const selectedLocalLang = localStorage.getItem('mbcLang');
             if(selectedLocalLang == 'RU'){
@@ -31,7 +32,6 @@ const Nav = () => {
     
 
     const handleChangeLangText = (lang) =>{
-        console.log(lang)
         if(lang === 'RU'){
             dispatch(ruLangActions())
             localStorage.setItem('mbcLang' , 'RU')
@@ -113,7 +113,7 @@ const Nav = () => {
                     <div className={cls.bar} id={cls.bar3}></div>
                 </button>
             </nav>
-            <Burger active={activeBurger} closeBtn={setActiveBurger}/>
+            <Burger active={activeBurger} closeBtn={setActiveBurger} changeLang={handleChangeLangText} selectedLang={selectedLocalLang}/>
         </div>
     )
 }

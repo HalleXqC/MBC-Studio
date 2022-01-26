@@ -4,7 +4,10 @@ export const ruLangData = {
         services: 'Сервисы',
         prices: 'Цены',
         cases: 'Портфолио',
-        videoediting: 'Монтаж видео'
+        videoediting: 'Монтаж видео',
+
+        lang: "Русский",
+        orderBtn: "Закажи проект сейчас"
     },
     cases: {
         title: "Портфолио",
@@ -77,7 +80,10 @@ export const enLangData = {
         services: 'Services',
         prices: 'Prices',
         cases: 'Cases',
-        videoediting: 'Videoediting'
+        videoediting: 'Videoediting',
+
+        lang: "English",
+        orderBtn: "Order a project now"
     },
     cases: {
         title: "Services",

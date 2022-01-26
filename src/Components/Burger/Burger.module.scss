@@ -2,6 +2,7 @@
     opacity: 0;
     background-color: #0F0F0F;
     position: fixed;
+    pointer-events: none;
     top: 0;
     left: 100%;
     z-index: 100;
@@ -165,6 +166,7 @@
 }
 #active{
     opacity: 1;
+    pointer-events: all;
     left: 0;
 }
 
