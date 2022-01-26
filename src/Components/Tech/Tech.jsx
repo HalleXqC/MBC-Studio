@@ -2,8 +2,11 @@ import cls from './Tech.module.scss'
 import { useState, useEffect, useRef } from 'react'
 import BetweenTitle from '../BetweenTitle/BetweenTitle'
 import useWindowDimensions from '../getWindowFunc/useWindowDimension'
+import { useSelector } from 'react-redux'
 
 const Tech = () => {
+
+    const {selectedLang: {tech}} = useSelector(s => s.lang)
 
     const [checkbox, setCheckbox] = useState('all');
     const {width} = useWindowDimensions()
@@ -30,7 +33,7 @@ const Tech = () => {
 
     return (
         <section className={cls.tech}>
-            <BetweenTitle content="Technologies & Tools" color="white"/>
+            <BetweenTitle content={tech.title} color="white"/>
             <ul>
                 <li ref={ref1} onClick={() => setCheckbox('design')} >
                     <span 
@@ -70,7 +73,7 @@ const Tech = () => {
                             <span className={cls.checkCircle}></span>
                         ) : null}
                     </span> 
-                    VideoEditing
+                    {tech.videoediting}
                 </li>
                 {width > 850 ? (
                     <li ref={ref5} onClick={() => setCheckbox('videoediting2')} >
@@ -81,7 +84,7 @@ const Tech = () => {
                                 <span className={cls.checkCircle}></span>
                             ) : null}
                         </span> 
-                        VideoEditing2
+                        {tech.videoediting2}
                     </li>
                 ) : null}
                 <li ref={ref6} onClick={() => setCheckbox('backend')} >
@@ -102,7 +105,7 @@ const Tech = () => {
                             <span className={cls.checkCircle}></span>
                         ) : null}
                     </span> 
-                    Marketing
+                    {tech.marketing}
                 </li>
             </ul>
             <div className={cls.grid}>

@@ -1,21 +1,25 @@
 import cls from './Form.module.scss'
 import BetweenTitle from '../BetweenTitle/BetweenTitle'
+import { useSelector } from 'react-redux'
 
 const Form = ({burger}) => {
+
+    const {selectedLang: {form}} = useSelector(s => s.lang)
+
     return (
         <div className={cls.root}>
             {burger ? '' : (
-                <BetweenTitle content="Get in touch" color="#EC1C24"/>
+                <BetweenTitle content={form.title} color="#EC1C24"/>
             )}
             <div className={cls.howToContact}>
                 <div className={cls.info}>
                     <div className={cls.infoTop}>
                         <div>
-                            <p>Text us:</p>
+                            <p>{form.textUs}</p>
                             <h1>edzen@gmail.com</h1>
                         </div>
                         <div>
-                            <p>Call us:</p>
+                            <p>{form.callUs}</p>
                             <h1>+996 703 00 00 00</h1>
                         </div>
                     </div>
@@ -46,10 +50,10 @@ const Form = ({burger}) => {
                     <a target="_blank" href=""><img src="/img/linkedIn.png" alt="linkedin" /></a>
                 </div>
                 <form className={cls.form} style={burger ? {display: "none"} : null}>
-                    <input placeholder="Jhon Smith" type="text" className={cls.littleInput}/>
-                    <input placeholder="Your gmail*" type="text" className={cls.littleInput}/>
-                    <textarea placeholder="Describe your project..." type="text" className={cls.bigInput}></textarea>
-                    <input type="submit" value="Order a project now" className={cls.submitInput}/>
+                    <input placeholder="John Smith" type="text" className={cls.littleInput}/>
+                    <input placeholder={form.placeholder1} type="text" className={cls.littleInput}/>
+                    <textarea placeholder={form.placeholder2} type="text" className={cls.bigInput}></textarea>
+                    <input type="submit" value={form.btnContent} className={cls.submitInput}/>
                 </form>
             </div>
         </div>

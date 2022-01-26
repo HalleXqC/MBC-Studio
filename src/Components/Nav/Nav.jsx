@@ -10,17 +10,21 @@ import { Link } from 'react-router-dom'
 
 
 
-const Nav = (props) => {
+const Nav = () => {
     const dispatch = useDispatch()
     const {selectedLang: {navbar}} = useSelector(s => s.lang)
     const selectedLocalLang = localStorage.getItem('mbcLang');
 
     useEffect(() => {
-        const selectedLocalLang = localStorage.getItem('mbcLang');
-        if(selectedLocalLang == 'RU'){
-            dispatch(ruLangActions())
+        if(!localStorage.getItem('mbcLang')){
+            localStorage.setItem('mbcLang', 'EN')
         }else{
-            dispatch(enLangActions())
+            const selectedLocalLang = localStorage.getItem('mbcLang');
+            if(selectedLocalLang == 'RU'){
+                dispatch(ruLangActions())
+            }else{
+                dispatch(enLangActions())
+            }
         }
     }, [dispatch])
 
@@ -68,7 +72,7 @@ const Nav = (props) => {
                             <ol style={isOpenServices ? {display: "flex"} : {display: "none"}}>
                                 <li><CustomLink className={cls.link} to="/frontend">Frontend</CustomLink></li>
                                 <li><CustomLink className={cls.link} to="/ux-ui">Ux & Ui</CustomLink></li>
-                                <li><CustomLink className={cls.link} to="/videoediting">Videoediting</CustomLink></li>
+                                <li><CustomLink className={cls.link} to="/videoediting">{navbar.videoediting}</CustomLink></li>
                                 <li><CustomLink className={cls.link} to="/backend">Backend</CustomLink></li>
                             </ol>
                         </li>

@@ -1,19 +1,18 @@
 .root{
-    position: absolute;
+    position: relative;
     width: 75%;
     text-align: center;
     border: 2px solid #EC1C24;
     cursor: pointer;
     outline: none;
-    transition: .3s;
     background: none;
     padding: 15px 0;
-    left: 50%;
-    bottom: 3rem;
-    transform: translateX(-50%);
+    margin-left: 12.5%;
+    transform: translateY(7vh);
     font-size: 20px;
     font-weight: 600;
     &:hover{
+        transition: .3s;
         background: #EC1C24;
         color: white;
     }

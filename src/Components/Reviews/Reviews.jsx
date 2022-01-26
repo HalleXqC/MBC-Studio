@@ -7,10 +7,13 @@ import 'swiper/css';
 import "swiper/css/navigation"
 import { useState } from 'react';
 import useWindowDimensions from '../getWindowFunc/useWindowDimension';
+import { useSelector } from 'react-redux'
 
 SwiperCore.use([Navigation])
 
 const Reviews = () => {
+
+    const {selectedLang: {reviews}} = useSelector(s => s.lang)
 
     const [currentSlide, setCurrentSlide] = useState('')
     const [slidesNumber, setSlidesNumber] = useState('')
@@ -57,8 +60,8 @@ const Reviews = () => {
 
     return (
         <div className={cls.root}>
-            <BetweenTitle content="MBC Studio Reviews" color="white"/>
-            <p className={cls.bottomTitle}>You can help other people by leaving a review about us .</p>
+            <BetweenTitle content={reviews.title} color="white"/>
+            <p className={cls.bottomTitle}>{reviews.reviewsText}</p>
             <div className={cls.exampleReview}>
                 <p>4.5/5</p>
                 <ul>

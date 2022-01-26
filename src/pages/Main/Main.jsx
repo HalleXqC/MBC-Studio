@@ -19,9 +19,9 @@ const Main = () => {
         <div className={cls.root}>
             <Header width={width}/>
             <div className={cls.cases}>
-                <BetweenTitle content={cases} color="white"/>
+                <BetweenTitle content={cases.title} color="white"/>
                 <Cases/>
-                <LongBtn content="See all works" color="white"/>
+                <LongBtn content={cases.longBtn} color="white"/>
             </div>
             <WhoWeAre/>
             <Tech/>
