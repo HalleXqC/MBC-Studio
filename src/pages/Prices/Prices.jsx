@@ -6,11 +6,15 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, {Navigation} from 'swiper'
 import 'swiper/css';
 import "swiper/css/navigation"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useWindowDimensions from '../../Components/getWindowFunc/useWindowDimension';
 import BetweenTitle from '../../Components/BetweenTitle/BetweenTitle'
 
 const Prices = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const { width } = useWindowDimensions()
     const [currentSlide1, setCurrentSlide1] = useState('')

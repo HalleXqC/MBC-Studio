@@ -10,8 +10,14 @@ import BetweenTitle from '../../Components/BetweenTitle/BetweenTitle'
 import LongBtn from '../../Components/LongBtn/LongBtn'
 import useWindowDimensions from "../../Components/getWindowFunc/useWindowDimension"
 import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 const Main = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const {selectedLang:{cases}} = useSelector(s => s.lang)
     const {width} = useWindowDimensions()
 

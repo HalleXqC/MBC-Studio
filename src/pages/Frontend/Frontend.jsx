@@ -7,8 +7,14 @@ import cls from './Frontend.module.scss'
 import LongBtn from '../../Components/LongBtn/LongBtn'
 import Form from '../../Components/Form/Form'
 import LongCase from '../../Components/LongCase/LongCase'
+import { useEffect } from 'react'
 
 const Frontend = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={cls.root}>
             <section className={cls.header} style={{background: "url('/img/header_front_bg.jpg') center / cover"}}>

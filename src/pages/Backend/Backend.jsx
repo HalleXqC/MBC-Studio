@@ -7,8 +7,14 @@ import BetweenTitle from '../../Components/BetweenTitle/BetweenTitle'
 import LongCase from '../../Components/LongCase/LongCase'
 import LongBtn from '../../Components/LongBtn/LongBtn'
 import Form from '../../Components/Form/Form'
+import { useEffect } from 'react'
 
 const Backend = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={cls.root}>
             <section className={cls.header} style={{background: "url('/img/backend_bg.jpg') center / cover"}}>

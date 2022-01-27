@@ -33,16 +33,16 @@ const Burger = ({active, closeBtn, changeLang, selectedLang}) => {
                         </button>
 
                         <ol style={isOpenServices ? {opacity: "1"} : {opacity: "0"}}>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/frontend">Frontend</CustomLink></li>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/ux-ui">Ux & Ui</CustomLink></li>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/videoediting">{navbar.videoediting}</CustomLink></li>
-                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/backend">Backend</CustomLink></li>
+                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/frontend" onClick={() => closeBtn(false)} >Frontend</CustomLink></li>
+                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/ux-ui" onClick={() => closeBtn(false)} >Ux & Ui</CustomLink></li>
+                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/videoediting" onClick={() => closeBtn(false)} >{navbar.videoediting}</CustomLink></li>
+                            <li style={isOpenServices ? {pointerEvents: "all"} : {pointerEvents: "none"}}><CustomLink className={cls.link} to="/backend" onClick={() => closeBtn(false)} >Backend</CustomLink></li>
                         </ol>
                     </li>
                     <hr />
-                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/prices">{navbar.prices}</CustomLink></li>
+                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/prices" onClick={() => closeBtn(false)}>{navbar.prices}</CustomLink></li>
                     <hr />
-                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/cases">{navbar.cases}</CustomLink></li>
+                    <li className={cls.anotherLink}><CustomLink className={cls.link} to="/cases" onClick={() => closeBtn(false)}>{navbar.cases}</CustomLink></li>
                     <hr />
                 </ul>
             </div>
