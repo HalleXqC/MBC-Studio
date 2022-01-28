@@ -29,49 +29,51 @@ const Prices = () => {
     const [slidesNumber3, setSlidesNumber3] = useState('')
     const slides3 = []
 
-    for(let i = 0; i < 3; i++){
-        slides1.push(
-            <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
-                <PriceBlock content={{
-                    list1: {
-                        title: "Animation Roller",
-                        price: `${100 * (i + 1)}`,
-                        desc: "Great for any kind of business!",
-                        item1: `Only ${(i + 1)} page`,
-                        item2: "We will do everything quality",
-                        item3: "Fast!"
-                    }
-                }}/>
-            </SwiperSlide>
-        )
-        slides2.push(
-            <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
-                <PriceBlock content={{
-                    list1: {
-                        title: "Animation Roller",
-                        price: `${100 * (i + 1)}`,
-                        desc: "Great for any kind of business!",
-                        item1: `Only ${(i + 1)} page`,
-                        item2: "We will do everything quality",
-                        item3: "Fast!"
-                    }
-                }}/>
-            </SwiperSlide>
-        )
-        slides3.push(
-            <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
-                <PriceBlock content={{
-                    list1: {
-                        title: "Animation Roller",
-                        price: `${100 * (i + 1)}`,
-                        desc: "Great for any kind of business!",
-                        item1: `Only ${(i + 1)} page`,
-                        item2: "We will do everything quality",
-                        item3: "Fast!"
-                    }
-                }}/>
-            </SwiperSlide>
-        )
+    if(width <= 768){
+        for(let i = 0; i < 3; i++){
+            slides1.push(
+                <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
+                    <PriceBlock content={{
+                        list1: {
+                            title: "Animation Roller",
+                            price: `${100 * (i + 1)}`,
+                            desc: "Great for any kind of business!",
+                            item1: `Only ${(i + 1)} page`,
+                            item2: "We will do everything quality",
+                            item3: "Fast!"
+                        }
+                    }}/>
+                </SwiperSlide>
+            )
+            slides2.push(
+                <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
+                    <PriceBlock content={{
+                        list1: {
+                            title: "Animation Roller",
+                            price: `${100 * (i + 1)}`,
+                            desc: "Great for any kind of business!",
+                            item1: `Only ${(i + 1)} page`,
+                            item2: "We will do everything quality",
+                            item3: "Fast!"
+                        }
+                    }}/>
+                </SwiperSlide>
+            )
+            slides3.push(
+                <SwiperSlide key={`slide-${i}`} className={cls.swiperSlide} virtualIndex={i}>
+                    <PriceBlock content={{
+                        list1: {
+                            title: "Animation Roller",
+                            price: `${100 * (i + 1)}`,
+                            desc: "Great for any kind of business!",
+                            item1: `Only ${(i + 1)} page`,
+                            item2: "We will do everything quality",
+                            item3: "Fast!"
+                        }
+                    }}/>
+                </SwiperSlide>
+            )
+        }
     }
 
     return (
