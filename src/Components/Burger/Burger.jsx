@@ -14,7 +14,7 @@ const Burger = ({active, closeBtn, changeLang, selectedLang}) => {
     return (
         <div className={cls.root} id={active ? cls.active : null}>
             <div className={cls.floatingNav}>
-                <Link to="/" className={cls.h1}>Logo</Link>
+                <Link to="/" className={cls.h1} onClick={() => closeBtn(false)}>Logo</Link>
                 <button onClick={() => closeBtn(false)} type="button"><Plus className={cls.icon}/></button>
             </div>
             <div className={cls.navLeft}>
