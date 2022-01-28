@@ -345,9 +345,9 @@
 @media screen and (max-height: 450px){
     .root{
         .nav{
-            padding-top: 0.4rem;
+            padding-top: 0;
             .burgerBtn{
-                top: 1.4    rem;
+                top: 16px;
             }
         }
     }
