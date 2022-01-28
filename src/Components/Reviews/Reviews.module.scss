@@ -100,6 +100,13 @@
         .swiper{
             padding-bottom: 2rem;
         }
+        .currentSlides{
+            color: white;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 1.5%;
+        }
     }
 }
 @media screen and (max-width: 600px){
@@ -114,11 +121,7 @@
             }
         }
         .currentSlides{
-            color: white;
-            width: 100%;
-            text-align: center;
-            position: absolute;
-            bottom: 0.5%;
+            bottom: 0.4%;
         }
     }
 }
@@ -133,6 +136,7 @@
     .root{
         .currentSlides{
             font-size: 14px;
+            bottom: 1%;
         }
     }
 }

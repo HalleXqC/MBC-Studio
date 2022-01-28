@@ -79,7 +79,7 @@ const Reviews = () => {
             }} onSlideChange={e => setCurrentSlide(e.realIndex + 1)}>
                 {slides}
             </Swiper>
-            {width <= 600 ? (
+            {width <= 768 ? (
                 <div className={cls.currentSlides}>{currentSlide} of {slidesNumber}</div>
             ) : ''}
         </div>
