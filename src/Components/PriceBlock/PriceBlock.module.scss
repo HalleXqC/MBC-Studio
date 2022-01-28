@@ -46,6 +46,12 @@
                 padding: 10px 0;
                 font-size: 18px;
                 background: none;
+                cursor: pointer;
+                transition: .3s;
+                &:hover{
+                    background: white;
+                    color: #26261F;
+                }
             }
         }
     }
