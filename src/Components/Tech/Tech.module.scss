@@ -230,6 +230,9 @@
             li{
                 display: inline-block;
                 margin: 5px 10px;
+                .checkbox{
+                    transform: translateY(3px);
+                }
             }
         }
     }
@@ -364,10 +367,10 @@
             #backend11{
                 grid-column: 3 / 4;
             }
-            #fronend1, #fronend2, #fronend3, #fronend4, #fronend5, #fronend6{
+            #frontend1, #frontend2, #frontend3, #frontend4, #frontend5, #frontend6{
                 grid-row: 3 / 4;
             }
-            #fronend7, #fronend8, #fronend9, #fronend10{
+            #frontend7, #frontend8, #frontend9, #frontend10{
                 grid-row: 4 / 5;
             }
             #frontend11, #frontend12{
@@ -377,13 +380,39 @@
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 425px){
     .tech{
         .grid{
             .design, .edit, .video, .frontend, .front, .backend, .marketing{
                 p{
                     font-size: 7px;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px){
+    .tech{
+        ul{
+            width: 95%;
+        }
+    }
+}
+@media screen and (max-width: 355px){
+    .tech{
+        ul{
+            li{
+                font-size: 13px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 339px){
+    .tech{
+        ul{
+            width: 99%;
+            li{
+                margin: 5px 7px;
             }
         }
     }
