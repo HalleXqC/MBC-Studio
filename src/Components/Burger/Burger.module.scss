@@ -198,8 +198,9 @@
 
 @media screen and (max-width: 410px){
     .root{
+        overflow-x: hidden !important;
         .orderBtn{
-            width: 60%;
+            width: 60% ;
         }
     }
 }
