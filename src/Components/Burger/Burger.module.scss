@@ -3,12 +3,14 @@
     background-color: #0F0F0F;
     position: fixed;
     pointer-events: none;
+    overflow-y: scroll !important;
     top: 0;
     left: 100%;
-    z-index: 100;
+    z-index: 100000;
     width: 100%;
     transition: 0.5s;
-    min-height: 100vh;
+    max-height: 100vh;
+    padding-bottom: 10vh;
     .floatingNav{
         position: absolute;
         background-color: #0F0F0F;
